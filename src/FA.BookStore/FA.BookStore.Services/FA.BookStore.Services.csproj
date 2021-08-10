@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="BaseServices\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\FA.BookStore.Common\FA.BookStore.Common.csproj" />
+    <ProjectReference Include="..\FA.BookStore.Data\FA.BookStore.Data.csproj" />
+  </ItemGroup>
+
+</Project>

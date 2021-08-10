@@ -7,3 +7,6 @@
 /src/FA.BookStore/FA.BookStore.Models/obj
 /src/FA.BookStore/FA.BookStore.Data/bin/Debug/net6.0
 /src/FA.BookStore/FA.BookStore.Models/bin/Debug/net6.0
+/src/FA.BookStore/FA.BookStore.Common/obj
+/src/FA.BookStore/FA.BookStore.Services/obj
+/src/FA.BookStore/FA.BookStore.Common/bin/Debug/net6.0
