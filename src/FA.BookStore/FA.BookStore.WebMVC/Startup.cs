@@ -39,10 +39,16 @@ namespace FA.BookStore.WebMVC
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(
+            IApplicationBuilder app,
+            IWebHostEnvironment env,
+            BookStoreDbContext context
+            )
         {
+            // Neu nhu dang trong qua trinh phat trien phan mem
             if (env.IsDevelopment())
             {
+                DbInitializer.Seed(context);
                 app.UseDeveloperExceptionPage();
             }
             else

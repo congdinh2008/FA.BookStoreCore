@@ -1,22 +1,30 @@
-﻿using FA.BookStore.WebMVC.Models;
+﻿using FA.BookStore.Services;
+using FA.BookStore.WebMVC.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System.Diagnostics;
+using System.Threading.Tasks;
 
 namespace FA.BookStore.WebMVC.Controllers
 {
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private readonly ICategoryServices _categoryServices;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(
+            ILogger<HomeController> logger,
+            ICategoryServices categoryServices
+            )
         {
             _logger = logger;
+            _categoryServices = categoryServices;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            return View();
+            var categories = await _categoryServices.GetAllAsync();
+            return View(categories);
         }
 
         public IActionResult Privacy()

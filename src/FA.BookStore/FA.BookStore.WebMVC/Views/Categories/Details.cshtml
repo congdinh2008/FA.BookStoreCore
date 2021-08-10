@@ -1,0 +1,16 @@
+﻿@model Category
+@{
+    ViewBag.Title = Model.Name;
+}
+
+<div class="card">
+    <div class="card-header">
+        @Model.Name
+    </div>
+    <div class="card-body">
+        @Model.Description
+    </div>
+    <div class="card-footer">
+        @Model.InsertedAt.TimeOfDay
+    </div>
+</div>
