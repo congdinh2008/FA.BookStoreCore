@@ -1,0 +1,9 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/src/FA.BookStore/.vs/FA.BookStore/v17
+/src/FA.BookStore/FA.BookStore.Data/obj
+/src/FA.BookStore/FA.BookStore.Models/obj
+/src/FA.BookStore/FA.BookStore.Data/bin/Debug/net6.0
+/src/FA.BookStore/FA.BookStore.Models/bin/Debug/net6.0
