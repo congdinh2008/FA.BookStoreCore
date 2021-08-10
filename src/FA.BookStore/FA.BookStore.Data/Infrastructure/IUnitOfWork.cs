@@ -13,6 +13,8 @@ namespace FA.BookStore.Data.Infrastructure
 
         IGenericRepository<Category> CategoryRepository { get; }
 
+        IGenericRepository<Book> BookRepository { get; }
+
         #endregion
 
         int SaveChanges();

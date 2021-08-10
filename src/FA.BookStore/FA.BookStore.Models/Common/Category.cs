@@ -1,4 +1,6 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace FA.BookStore.Models
@@ -16,5 +18,7 @@ namespace FA.BookStore.Models
 
         [MaxLength(500, ErrorMessage = "The {0} less than {1} characters.")]
         public string Description { get; set; }
+
+        public virtual ICollection<Book> Books { get; set; }
     }
 }

@@ -36,6 +36,7 @@ namespace FA.BookStore.WebMVC
             // Register DI
             services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddScoped<ICategoryServices, CategoryServices>();
+            services.AddScoped<IBookServices, BookServices>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

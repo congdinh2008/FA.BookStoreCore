@@ -22,6 +22,11 @@ namespace FA.BookStore.Data.Infrastructure
         public IGenericRepository<Category> CategoryRepository =>
             _categoryRepository ?? new GenericRepository<Category>(_dbContext);
 
+        private IGenericRepository<Book> _bookRepository;
+
+        public IGenericRepository<Book> BookRepository =>
+            _bookRepository ?? new GenericRepository<Book>(_dbContext);
+
         #region Methods
         public int SaveChanges()
         {
